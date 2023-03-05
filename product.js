@@ -1,3 +1,5 @@
+
+
 function createDivChild(x){
     // const x = document.getElementById("test");
     var icon = x.children[1];
@@ -24,14 +26,17 @@ function createDivChild(x){
 
 
 const parent = document.getElementById("product");
-getProduct();
-async function getProduct(){
-
+async function getProduct(index){
     const api = "https://63fb0a377a045e192b61c296.mockapi.io/products"
     const res = await fetch(api);
     const data = await res.json();
 
-    for(let i = 0; i < data.length; i++){
+    var len = index + 9;
+    if(len > data.length){
+        len = data.length;
+    }
+
+    for(let i = index; i < len; i++){
         const product = data[i];
 
         const {img , name, cost} = product;
@@ -57,4 +62,71 @@ async function getProduct(){
         parent.appendChild(product_element);
     }
 
+}
+
+function remove_product(){
+    let to_remove = document.querySelectorAll('.detail');
+    for(let i = 0; i < to_remove.length; i++){
+        to_remove[i].parentNode.removeChild(to_remove[i]);
+    }
+}
+
+var page_number = 1;
+const max_page_number = 3;
+const min_page_number = 1;
+function switchPageNumber(number){
+
+    if(number === 0){
+
+        const button = document.getElementById("page_number_1");
+        button.classList.add("page_number_active");
+        getProduct(0);
+    }
+    else{
+
+        let text = "page_number_";
+        text += String(page_number);
+        
+        const remove_active = document.getElementById(text);
+        remove_active.classList.remove("page_number_active");
+
+        if(number === 1){
+
+            const button = document.getElementById("page_number_1");
+            button.classList.add("page_number_active");
+            page_number = 1;
+            remove_product()
+            getProduct(0);
+
+        }
+        else if(number === 2){
+
+            const button = document.getElementById("page_number_2");
+            button.classList.add("page_number_active");
+            page_number = 2;
+            remove_product()
+            getProduct(9);
+
+        }
+        else{
+            const button = document.getElementById("page_number_3");
+            button.classList.add("page_number_active");
+            page_number = 3;
+            remove_product()
+            getProduct(18);
+
+        }
+    }
+}
+switchPageNumber(0);
+
+function switchByButton(name){
+    
+    if(name === "left" && page_number > min_page_number){
+        switchPageNumber(page_number - 1);
+    }
+
+    if(name === "right" && page_number < max_page_number){
+        switchPageNumber(page_number + 1);
+    }
 }

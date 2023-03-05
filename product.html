@@ -286,34 +286,37 @@
    
     <div class="pagination">
 
-        <div class="border_icon">
-            <a href="###">
+        <div onclick="switchByButton('left')" class="border_icon" id="arrow-left">
+            <p>
                 <i class="fa-solid fa-arrow-left"></i>
-            </a>
+            </p>
         </div>
         
-        <div class="border_icon">
-            <a href="###">
-                <span>1</span>
-            </a>
-        </div>           
-        
-        <div class="border_icon">
-            <a href="###">
-                <span>2</span>
-            </a>
+        <div class="page_number">
+            
+            <div onclick="switchPageNumber(1)" class="number_icon" id="page_number_1">
+                <p>
+                    <span>1</span>
+                </p>
+            </div>           
+            
+            <div onclick="switchPageNumber(2)" class="number_icon" id="page_number_2">
+                <p>
+                    <span>2</span>
+                </p>
+            </div>
+            
+            <div onclick="switchPageNumber(3)" class="number_icon" id="page_number_3">
+                <p>
+                    <span>3</span>
+                </p>
+            </div>
         </div>
-        
-        <div class="border_icon">
-            <a href="###">
-                <span>3</span>
-            </a>
-        </div>
-        
-        <div class="border_icon">
-            <a href="###">
+    
+        <div onclick="switchByButton('right')" class="border_icon" id="arrow-right">
+            <p>
                 <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            </p>
         </div>
         
 

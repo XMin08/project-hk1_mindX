@@ -92,6 +92,10 @@ body{
     color: #333333;
     font-size: 14px;
 }
+.list_info .title_page a:hover{
+
+    color: #636363;
+}
 .list_info .title_page h1{
     font-size: 16px;
     margin-right: 20px;
@@ -134,6 +138,7 @@ body{
     height: 45px;
     text-align: center;
     background-color: rgb(100, 99, 99);
+    padding-top: 10px;
     
 }
 
@@ -149,6 +154,13 @@ body{
     color: #333333;
 }
 
+.list_info .product .detail:hover{
+
+    border-radius: 16px;
+    box-shadow: 0px 8px 23px rgba(218, 224, 249, 0.7);
+    border: 1px solid #BFC8E6;
+}
+
 .menu_active{
     display: block !important;
     /* transition: transform 5s ease-in;
@@ -156,25 +168,51 @@ body{
 }
 
 .pagination{
-    padding-top: 25%;
-    width: 25%;
+    width: 30%;
+    height: 7%;
     margin-top: 30px;
-    color: #333333;
     font-size: 20px;
     display: flex;
-    gap: 5%;
+    justify-content: space-between;
 }
 
 .pagination .border_icon{
-    width: 16%;
+    width: 13%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 1px red;
+    border: solid 1px #dddddd;
     border-radius: 25px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.pagination .border_icon:active{
+    background-color: #000000;
+    border-color: #000000;
+    color: #FFFFFF;
 }
 
-.pagination .border_icon a{
-    text-decoration: none;
-    
+.pagination .page_number{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination .page_number .number_icon{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #dddddd;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.page_number_active {
+
+    cursor: not-allowed !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    color: #FFFFFF;
 }

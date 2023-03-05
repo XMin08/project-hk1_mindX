@@ -27,7 +27,8 @@ function createDivChild(x){
 
 const parent = document.getElementById("product");
 async function getProduct(index){
-    const api = "https://63fb0a377a045e192b61c296.mockapi.io/products"
+    
+    const api = "http://127.0.0.1:5500/list_product.json"
     const res = await fetch(api);
     const data = await res.json();
 

@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.detail_product{
+    margin: 30px auto;
+    /* padding: 0 30px; */
+    max-width: 1140px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    gap: 5%;
+    
+}
+
+.detail_product .img_product {
+    width: 30%;
+}
+
+.detail_product .img_product img {
+
+    width: 100%;
+    height: auto;
+}
+
+.detail_product .infor_product {
+    width: 65%;
+
+}
+
+.detail_product .infor_product .name_title {
+    border-bottom  : 1px solid #e0e0e0;
+}
+
+.detail_product .infor_product .name_title h1{
+    font-weight: normal;
+    font-size: 33px;
+}
+
+.detail_product .infor_product .name_title span, i{
+    font-size: 30px;
+}
+.detail_product .infor_product .ID_product {
+    border-bottom  : 1px solid #e0e0e0;
+    display: flex;
+    padding: 3% 0;
+}
+
+.detail_product .infor_product .ID_product p{
+    color: #636363;
+    padding-right: 10%;
+}
+
+.detail_product .infor_product .size {
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    padding: 3% 0;
+}
+
+.detail_product .infor_product .size p{
+    color: #636363;
+    padding-right: 10%;
+}
+
+.detail_product .infor_product .size ul{
+
+    display: flex;
+    list-style-type: none;
+    gap: 2%;
+    width: 50%;
+    text-align: center;
+}
+
+.detail_product .infor_product .size ul li{
+
+    width: 25%;
+    border-radius: 20px;
+    border: 1px solid #b3b1b1;
+    cursor: pointer;
+    /* box-shadow: #636363; */
+}
+
+.size_active{
+
+    background-color: black;
+    color: white;
+}
+
+.detail_product .infor_product .form{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.detail_product .infor_product .form .amount{
+    display: flex;
+    padding: 2% 0;
+}
+.detail_product .infor_product .form .amount span{
+    font-weight: 530;
+}
+
+.detail_product .infor_product .form .amount .custom_input{
+    width: 16%;
+    display: flex;
+    margin-left: 10%;
+    border: 1px solid #b3b1b1;
+    border-radius: 20px;
+    justify-content: center;
+    padding: 5px 0;
+    
+}
+
+
+.detail_product .infor_product .form .amount .custom_input button{
+    width: 23%;
+    border: none;
+    cursor: pointer;
+
+}
+
+.detail_product .infor_product .form .amount .custom_input input{
+    border: none;
+    background-color: whitesmoke;
+    width: 40%;
+    left: 25%;
+    text-align: center;
+    font-weight: 530;
+}
+.detail_product .infor_product .form .amount .custom_input input:focus{
+    outline: 0;
+}
+
+.detail_product .infor_product .form .list_button {
+    display: flex;
+    width: 80%;
+    padding: 2% 0;
+    justify-content:space-between;
+}
+
+.detail_product .infor_product .form .list_button button{
+    width: 30%;
+    padding: 10px 0;
+    border-radius: 21px;
+    border: 1px solid #b3b1b1;
+}
+
+.detail_product .infor_product .form .list_button .payment{
+    background-color: red;
+}
+
+.detail_product .infor_product .form .list_button button a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.detail_product .infor_product .form .list_button button:hover{
+    background-color: black;
+    color: white;
+}
+
+.detail_product .infor_product .contact{
+    border-bottom  : 1px solid #e0e0e0;
+    padding: 2% 0;
+}
+
+.detail_product .infor_product .contact span{
+    font-weight: 530;
+    margin-right: 10%;
+}
+
+.detail_product .infor_product .contact i{
+    color: rgb(59, 166, 130);
+}
+.detail_product .infor_product .contact .phone{
+    font-size: 30px;
+    cursor: pointer;
+}
+.detail_product .infor_product .contact .phone:hover{
+    color: #7a7a7a;
+}
+.detail_product .infor_product .intro_product{
+    border-bottom: 1px solid #e0e0e0;
+    padding: 2% 0;
+}
+.detail_product .infor_product .intro_product .button_intro{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    cursor: pointer;
+}
+
+.detail_product .infor_product .intro_product .text_intro{
+
+    width: 100%;
+    padding: 3% 5%;
+    font-size: 20px;
+    display: none;
+}
+.text_active {
+    display: block !important;
+}
+.detail_product .infor_product .intro_product .text_intro ul{
+    list-style: none;
+}
+
+.detail_product .infor_product .intro_product .text_intro ul li::before{
+    content: "- ";
+}

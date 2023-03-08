@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body{
@@ -14,6 +13,8 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    scroll-behavior: smooth;
+
 }
 
 .menu{
@@ -250,4 +251,22 @@ body{
     background-color: #000000 !important;
     border-color: #000000 !important;
     color: #FFFFFF;
+}
+
+.scrollTop{
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    transition: all 0.5s ease 0s;
+    background-color: #000000;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.scrollTop:hover{
+    background-color: white;
+    color: #000000;
 }

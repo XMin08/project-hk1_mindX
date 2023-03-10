@@ -1,0 +1,431 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    max-width: 100%;
+    color: black;
+
+}
+a:link{
+  text-decoration:none;
+  color: black;
+  }
+#main{
+   display: block;
+}
+ul{
+    list-style-type: none;
+}
+/* <!-- 1.Nav Bar Section  --> */
+#navBar{
+    box-shadow: 0 3px 6px #efefef;
+    max-width: auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#navBarPhone{
+  text-align: right;
+ }
+ 
+ 
+#navBarParent{
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    padding: 0px 10px;
+}
+#navBarParentSecond{
+    display: flex;
+    justify-content: space-around; 
+  
+    
+}
+.navBarChildSecond{
+    padding: 26px 10px ;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    
+}   
+.navBarChild{
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0px 10px;
+    
+}
+#navBarLogo{
+    margin-right: 30px;
+    padding: 26.5px 0px ;
+  
+}
+ul#navBarParentSecond li {
+    list-style: none;
+    position: relative;
+    display: inline;
+  }
+  
+ul#navBarParentSecond > li > a{
+    color: #333;
+    text-decoration: none;
+  }
+  
+ul#navBarParentSecond li:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0px;
+    height: 4px;
+    background: #333;
+    transition: all 0.35s;
+  }
+  
+  ul#navBarParentSecond > li:hover:after {
+    width: 100%;
+    left: 0;
+  }
+  
+  ul#navBarParentSecond li a:hover {
+    text-decoration: none;
+  }
+/* SALE ALL - Vertical Menu */
+.navBarChildSecond.saleButton{
+    position: relative;
+    display: inline-block;
+}
+.saleListParent{    
+    display: none;
+    position: absolute;
+    top: 80px ;
+    left: 0px;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1 ;
+    background-color: #fff;
+    padding: 0;
+}
+.saleListChild>a{
+  text-decoration: none;
+  color: black;
+}
+.saleListChild:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+.saleListParent a{
+    display: flex ;
+    align-items: center;
+    padding: 10px;
+    width: 280px;
+    height: 40px;
+    border-bottom-style:dotted ;
+    border-width: 0.1px ;
+    justify-content: space-between;
+}
+.saleListParent a:hover {
+    background-color: #ddd;
+}
+.navBarChildSecond.saleButton:hover .saleListParent {
+  display: block;
+}
+/* SALE ALL - Vertical Menu End*/
+
+
+
+/* SẢN PHẨM - Vertical Menu */
+.navBarChildSecond.spButton{
+  position: relative;
+  display: inline-block;
+}
+.spListParent{    
+  display: none;
+  position: absolute;
+  top: 80px ;
+  left: 0px;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1 ;
+  background-color: #fff;
+  padding: 0;
+}
+.spListChild>a{
+  text-decoration: none;
+  color: black;
+}
+.spListChild:hover {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+.spListParent a{
+  display: flex ;
+  align-items: center;
+  padding: 10px;
+  width: 280px;
+  height: 40px;
+  border-bottom-style:dotted ;
+  border-width: 0.1px ;
+  justify-content: space-between;
+}
+.spListParent a:hover {
+  background-color: #ddd;
+}
+.navBarChildSecond.spButton:hover .spListParent {display: block;}
+.navBarChild.navBarSearch{
+    position: relative;
+}
+/* SEARCH BUTTON  */
+.searchChild{
+    display: none;
+    position: absolute;
+    padding: 10px ;
+    top: 50px ;
+    right: 5px;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1 ;
+    width: 280px;
+    height: 50px;
+    border-radius: 20px;
+    border-width: 2px solid black;
+    background-color: #fff;
+}
+.navBarChild.navBarSearch:hover .searchChild{
+display: flex;
+}
+#ipt{
+   border: none ;
+   width: 160px;
+   
+}
+.searchChild>li>i{
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 7px 10px 0 0;
+  
+}
+.searchChild>li>a:link{
+  text-decoration: none;
+}
+
+/* ACCOUNT BUTTON  */
+.navBarChild.navBarAccount{
+    position: relative;
+    color: black;
+    
+}
+.actChild{
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    left: 0 px;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    padding: 20px;
+    background-color: white;
+}
+.navBarChild.navBarAccount:hover .actChild{
+display: block;
+}
+.actChild>li{
+  color: black;
+}
+.actChild>li:hover{
+  background-color: #DDDDDD;;
+}
+/* CART BUTTON  */
+.navBarCart{
+  position: relative;
+  display: flex ;
+  flex-direction: row;
+}
+.cartName>p{
+margin: 0;
+padding: 0;
+font-weight: 500;
+}
+.cartName{
+margin-top: 10px;
+}
+.cartIn4{
+  position: absolute;
+  bottom: -50px;
+  left: 0px;
+  display: none;
+  padding-top: 6px ;
+  text-align: center;
+  min-width: 280px;
+  height: 50px;
+  border-width: 2px solid black;
+  background-color: #DDDDDD;
+}
+.navBarCart:hover .cartIn4{
+  display: block;
+}
+
+
+
+/* CSS các Icon thuộc NavBar  */
+.cartIcon,
+.navBarChild.navBarSearch,
+.navBarChild.navBarAccount
+{
+  border: 2px #ebebeb solid;
+  border-radius: 70px;
+  width: 52px;
+  height: 52px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 7px 10px 0 0;
+}
+
+.ti-search,
+.ti-user,
+.ti-shopping-cart{
+   font-size: 28px;
+   color: black;
+   text-decoration-style: none;
+  
+}
+
+/* <!-- 1.Nav Bar Section End --> */
+
+/* <!-- 5.FOOTER SECTION.--> */
+#footer{
+  width: 70%;
+  margin: 0 15%;
+}
+.footerP1{
+  width: 100%;
+  background-color: black;
+}
+.footer1,
+.footer2{
+  width: 70%;
+  margin: 0 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+.footer1{
+  padding: 20px 30px;
+  color: white;
+  background-color: black;
+}
+.changecolortext{
+  color: white;
+}
+.footer2{
+  padding: 20px 0;
+}
+.footerA,
+.footerB{
+  padding: 0 40px;
+}
+.f2Child>button{
+  background: #FFF;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 9px 10px 0 0;
+  transition: transform .7s ease-in-out;
+}
+.f2Child>button:hover{
+  transform: rotate(360deg);
+}
+/* <!-- 5.FOOTER SECTION END. --> */
+
+
+
+/* LOG IN & REGISTER  */
+
+.loginSection{
+  
+}
+.loginSection div:nth-child(1){
+  margin: 10px 0 30px 0;
+}
+.loginSection div:nth-child(2){
+font-weight: 550;
+}
+.loginBoard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginSection{
+ max-width: 70%;
+ margin: 0 15%;
+}
+.loginBoardChild:nth-child(1){
+  font-weight: 500;
+}
+.loginBoardChild:nth-child(2){
+  
+}
+.loginBoardChild div:nth-child(3){
+  margin: 20px 0;
+}
+.loginFb,
+.loginGg{
+  color: white;
+  width: 150px;
+  height: 36px;
+  border-style: none;
+}
+.ti-facebook,
+.ti-google{
+  color: white;
+  margin: 0 12px 0 0;
+}
+.loginFb{
+  background-color:royalblue;
+}
+.loginGg{
+  background-color:rgb(228, 7, 7);
+}
+.loginBoardChild div:nth-child(4)>p{
+  margin-bottom: 0 ;
+}
+.loginInput{
+  margin-bottom: 20px;
+  width: 500px ;
+  height: 40px;
+}
+.loginBoardChild div:nth-child(5)>p{
+  margin-bottom: 0 ;
+}
+.loginBoardChild div:nth-child(6){
+  margin-bottom: 20px;
+}
+.register>a{
+  font-weight: bold;
+  color: black;
+}
+.loginBoardChild div:nth-child(7){
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+.loginBoardChild div:nth-child(7)>button{
+  width: 150px;
+  height: 36px;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+}
+
+/* LOG IN & REGISTER END */

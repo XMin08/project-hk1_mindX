@@ -409,23 +409,88 @@ font-weight: 550;
   margin-bottom: 0 ;
 }
 .loginBoardChild div:nth-child(6){
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .register>a{
   font-weight: bold;
   color: black;
 }
 .loginBoardChild div:nth-child(7){
-display: flex;
-flex-direction: row;
-justify-content: space-around;
+margin: 0;
 }
-.loginBoardChild div:nth-child(7)>button{
+button.dangnhap{
   width: 150px;
   height: 36px;
   color: white;
   background-color: black;
   border-radius: 20px;
+  transition-duration: 0.4s;
 }
+button.dangnhap:hover {
+  background-color: white; 
+  color:  black;
+}
+.loginBoardChild{
+    text-align: center;
+  }
+
+#loginHome{
+  /* display: none; */
+}
+#registerSection{
+  /* display: none; */
+}
+#loginThanhcong{
+  /* display: none; */
+}
+#loginThatbai{
+  /* display: none; */
+}
+  /* LOGINTHANHCONG'S CSS  */
+
+.quaylai{
+  margin: 0 20px 0 0px;
+  }
+.quaylai>button{
+    color:white;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    transition: transform .7s ease-in-out;
+}
+.quaylai>button:hover{
+  transform: rotate(360deg);
+}
+.quaylaiBoard{
+    width:250px;
+    height: auto;
+    border: #DDDDDD;
+    background-color: #DDDDDD;
+    padding: 20px 0 10px 0;
+    margin-bottom: 20px;
+  }
+  .quaylaiBoard {
+  --g: 4px;     /* the gap */
+  --b: 12px;    /* border thickness*/
+  --c: #669706; /* the color */
+  
+  
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: .3s;
+}
+.quaylaiBoard:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+
 
 /* LOG IN & REGISTER END */

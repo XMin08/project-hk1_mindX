@@ -15,7 +15,7 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body onload="onLoad()">
     <div id="main">
 <!-- HEADER & FOOTER SECTION -->
 <!-- HEADER  -->
@@ -110,9 +110,9 @@
                             <i class="ti-user"></i>
                         </a>
                         <ul class="actChild">
-                            <li><a  href="">Đăng nhập</a></li>
+                            <li onclick="setLogin()"><a href="./loginlogout.html">Đăng nhập</a></li>
                             <hr>
-                            <li><a href="">Đăng ký</a></li>
+                            <li onclick="setRegister()"><a href="./loginlogout.html">Đăng ký</a></li>
                         </ul>
                     </li>
     <!-- CART BUTTON -->
@@ -139,7 +139,7 @@
 
 <!-- LOG IN & REGISTER  -->
 <div class="loginSection" id="loginHome">
-    <div>
+    <div class="title_name">
         <p>Trang chủ : <span style="font-weight: 600;"> Đăng nhập tài khoản </span></p>
     </div>
     <div>
@@ -160,63 +160,30 @@
             </div>
             <div>
                 <p>Email * :</p>
-                <input class="loginInput" type="email">
+                <input class="loginInput" type="email" id="email_login">
             </div>
             <div>
                 <p>Mật khẩu * :</p>
-                <input class="loginInput" type="password">
+                <input class="loginInput" type="password" id="password_login">
             </div>
             <div>
-                <p>Nếu chưa có tài khoản, click vào <span class="register"><a href="#">đây</a></span> để đăng ký</p>
+                <p>Nếu chưa có tài khoản, click vào <span class="register"><a href="./loginlogout.html" onclick="setRegister()">đây</a></span> để đăng ký</p>
             </div>
             <div>
-                <button class="dangnhap">Đăng nhập</button>
+                <button class="dangnhap" onclick="login()">Đăng nhập</button>
                 <button class="dangnhap">Quên mật khẩu?</button>
             </div>
         </div>
     </div>
 </div>
-<div class="loginSection" id="loginThanhcong">
-    <div>
-        <p>Trang chủ : <span style="font-weight: 600;"> Đăng nhập tài khoản </span></p>
-    </div>
-    <div>
-        <p>ĐĂNG NHẬP TÀI KHOẢN</p>
-    </div>
-    <hr>
-    <div class="loginBoard">
-        <div class="loginBoardChild">
-            <div class="quaylaiBoard">
-                <p style="color:rgb(255, 0, 0)">ĐĂNG NHẬP THÀNH CÔNG</p>
-                <a class="quaylai" href="./janshop.html"><button>>>CLICK<<</button></a> 
-                <p>ĐỂ TRỞ VỀ TRANG CHỦ</p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="loginSection" id="loginThatbai">
-    <div>
-        <p>Trang chủ : <span style="font-weight: 600;"> Đăng nhập tài khoản </span></p>
-    </div>
-    <div>
-        <p>ĐĂNG NHẬP TÀI KHOẢN</p>
-    </div>
-    <hr>
-    <div class="loginBoard">
-        <div class="loginBoardChild">
-            <div class="quaylaiBoard">
-                <p style="color:rgb(255, 0, 0)">ĐĂNG NHẬP THẤT BẠI</p>
-                <a class="quaylai" href="#"><button>QUÊN MẬT KHẨU?</button></a> 
-            </div>
-        </div>
-    </div>
-</div>
+
+
 <div class="loginSection" id="registerSection">
     <div>
-        <p>Trang chủ : <span style="font-weight: 600;"> Đăng nhập tài khoản </span></p>
+        <p>Trang chủ : <span style="font-weight: 600;"> Đăng ký tài khoản </span></p>
     </div>
     <div>
-        <p>ĐĂNG NHẬP TÀI KHOẢN</p>
+        <p>ĐĂNG KÝ TÀI KHOẢN</p>
     </div>
     <hr>
     <div class="loginBoard">
@@ -256,6 +223,8 @@
         </div>
     </div>
 </div>
+
+
 
 <!-- LOG IN & REGISTER END  -->
 
@@ -313,5 +282,7 @@
 
 
 </div>
+
+<script src="./loginlogout.js"></script>
 </body>
 </html>

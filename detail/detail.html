@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./detail.css">
     <title>Detail Product</title>
 </head>
-<body onload="getDetail()">
+<body onload="getDetail(), userActive()">
     
     <header>
         <div id="navBarPhone">
@@ -81,11 +81,11 @@
                             </ul>
                         </li>
         
-                        <li class="navBarChildSecond"><a class="#" href="./membership.html">Membership</a></li>
+                        <li class="navBarChildSecond"><a class="#" href="/assets/membership.html">Membership</a></li>
         
                         <li class="navBarChildSecond"><a class="#" href="#">Tin tức</a></li>
         
-                        <li class="navBarChildSecond"><a class="#" href="./lienhe.html">Hệ thống cửa hàng</a></li>    
+                        <li class="navBarChildSecond"><a class="#" href="/assets/lienhe.html">Hệ thống cửa hàng</a></li>    
                     </ul>             
                 </li>
     <!-- SEARCH BUTTON -->
@@ -103,10 +103,8 @@
                     <a href="/assets/loginlogout.html">
                         <i class="ti-user"></i>
                     </a>
-                    <ul class="actChild">
-                        <li onclick="setLogin()"><a href="/assets/loginlogout.html">Đăng nhập</a></li>
-                        <hr>
-                        <li onclick="setRegister()"><a href="/assets/loginlogout.html">Đăng ký</a></li>
+                    <ul class="actChild" id="actChild">
+                        
                     </ul>
                 </li>
     <!-- CART BUTTON -->

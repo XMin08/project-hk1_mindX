@@ -13,7 +13,7 @@
 
     <title>JanShop</title>
 </head>
-<body  onload="switchPageNumber(0)">
+<body  onload="switchPageNumber(0) , userActive()">
     <header>
         <div id="navBarPhone">
             <p style="color: red;">Hotline: 028 9999 0090</p>
@@ -103,10 +103,8 @@
                    <a href="/assets/loginlogout.html">
                        <i class="ti-user"></i>
                    </a>
-                   <ul class="actChild">
-                    <li onclick="setLogin()"><a href="/assets/loginlogout.html">Đăng nhập</a></li>
-                    <hr>
-                    <li onclick="setRegister()"><a href="/assets/loginlogout.html">Đăng ký</a></li>
+                   <ul class="actChild" id="actChild">
+                    
                    </ul>
                </li>
     <!-- CART BUTTON -->

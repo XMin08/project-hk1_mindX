@@ -244,6 +244,7 @@ a:link{
       z-index: 10;
       padding: 20px;
       background-color: white;
+      cursor: pointer;
   }
   .navBarChild.navBarAccount:hover .actChild{
   display: block;

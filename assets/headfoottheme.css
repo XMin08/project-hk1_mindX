@@ -226,7 +226,7 @@ display: flex;
     position: absolute;
     text-align: center;
     top: 50px;
-    left: 0 px;
+    left: 0px;
     min-width: 220px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 10;

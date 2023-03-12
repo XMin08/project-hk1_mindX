@@ -17,7 +17,7 @@
     
 </head>
 
-<body>
+<body onload="userActive()">
     <div id="main">
 <!-- 1.Nav Bar Section - Navigation bar là thanh điều hướng, thường được đặt ở đầu trang web, 
     mục đích là giúp người dùng duyệt qua trang web của bạn một cách dễ dàng. -->
@@ -109,10 +109,14 @@
                     <a href="./loginlogout.html">
                         <i class="ti-user"></i>
                     </a>
-                    <ul class="actChild">
-                        <li onclick="setLogin()"><a href="./loginlogout.html">Đăng nhập</a></li>
+                    <ul class="actChild" id="actChild">
+                        <!-- <li onclick="setLogin()"><a href="./loginlogout.html">Đăng nhập</a></li>
                         <hr>
                         <li onclick="setRegister()"><a href="./loginlogout.html">Đăng ký</a></li>
+                        
+                        <li><p>User</p></li>
+                        <hr>
+                        <li><p>Log out</p></li> -->
                     </ul>
                 </li>
 <!-- CART BUTTON -->

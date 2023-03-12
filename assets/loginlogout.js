@@ -25,12 +25,14 @@ function login(){
     if(user_local === user_login && pass_local === pass_login){
 
         window.location = "http://127.0.0.1:5500/assets/janshop.html";
+        sessionStorage.setItem("account_active", "admin");
         return;
     }
 
     if(user_session === user_login && pass_session === pass_login){
 
         window.location = "http://127.0.0.1:5500/assets/janshop.html";
+        sessionStorage.setItem("account_active", user_session); 
         return;
     }
     alert("Wrong email or password");
@@ -65,4 +67,22 @@ function setLogin(){
 
 function setRegister(){
     localStorage.setItem("status", "register");
+}
+
+function userActive(){
+    const acc = sessionStorage.getItem("account_active");
+    const ul = document.getElementById("actChild");
+    console.log(acc);
+    if(acc === null){
+        const child = `<li onclick="setLogin()"><a href="./loginlogout.html">Đăng nhập</a></li>
+        <hr>
+        <li onclick="setRegister()"><a href="./loginlogout.html">Đăng ký</a></li>`
+        ul.innerHTML = child;
+    }
+    else{
+        const child = `<li><p>${acc}</p></li>
+        <hr>
+        <li><p>Log out</p></li>`
+        ul.innerHTML = child;
+    }
 }

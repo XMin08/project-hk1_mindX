@@ -232,6 +232,7 @@ display: flex;
     z-index: 10;
     padding: 20px;
     background-color: white;
+    cursor: pointer;
 }
 .navBarChild.navBarAccount:hover .actChild{
 display: block;
@@ -402,7 +403,7 @@ margin-top: 10px;
 }
 .diachilienhe>li{
   border-style:ridge ;
-  border: 1px solid red
+  border: 1px solid red;
   width: 450px;
   height: 36px;
   cursor: pointer;

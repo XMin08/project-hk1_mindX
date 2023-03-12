@@ -1,6 +1,9 @@
 
 function onLoad(){
     const status = localStorage.getItem("status");
+    localStorage.setItem("account_name","admin@gmail.com");
+    localStorage.setItem("account_password","123");
+
     if(status === "login"){
 
         const login = document.getElementById("loginHome");
